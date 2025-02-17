@@ -6,15 +6,17 @@
     </head>
     <body>
         <?php
-            $begin =12;
-            $end =18;
-            for ($i = $begin; $i<=$end;$i +=3){
-                ?>
-                <p style="font-size:<?php echo $i;?>pt">
-                    小櫻
-                <?php
-                print "</p>";
-            } ?>
-        
+            $a="sakuralittle";
+            $b= &$a;
+            $c= "a";
+            $d= $$c;
+            $PI= 3.14;
+            print "name " . $a . "<br/>";
+            print "name2 ". $b . "<br/>";
+            print "name3 ". $c . "<br/>";
+            print "name4 ". $d . "<br/>";
+            echo $a,$b,$c;
+            echo "PI:". $PI*5;
+            ?>
     </body>
 </html>
