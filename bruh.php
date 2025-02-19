@@ -3,6 +3,20 @@
 <head>
 <meta charset="utf-8"/>
 <title>哈哈哈大優惠</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+        body {
+            margin: 0;
+            overflow: hidden; /* 隱藏滾動條 */
+        }
+        #AQUA {
+            position: absolute;
+            width: 480px; /* 設定圖片寬度 */
+            height: auto; /* 設定圖片高度 */
+            top:0;
+            left:0;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +28,29 @@
 
 <img src="https://cdn.discordapp.com/attachments/971692563281104918/1341609848181358654/1720628382537.gif?ex=67b69f09&is=67b54d89&hm=dfe740e5706f71728cdb73826d7cf3f9b33e211ce6a233cc0036759a55c94d0f&" width="300" height="value" alt="gif">
 <p>
-<img src="aqua.png" width="480px"/>
+
+<img id="AQUA" src="aqua.png" />
+<script>
+    const img = document.getElementById('AQUA');
+    let posX = 0;
+    let posY = 0;
+    let speedX = 2; 
+    let speedY = 2;
+    function moveImage() {
+        posX += speedX;
+        posY += speedY;
+        if (posX + img.width >= window.innerWidth || posX < 0) {
+            speedX = -speedX; 
+        }
+        if (posY + img.height >= window.innerHeight || posY < 0) {
+            speedY = -speedY; 
+        }
+        img.style.left = posX + 'px';
+        img.style.top = posY + 'px';
+        requestAnimationFrame(moveImage); 
+    }
+    moveImage(); 
+</script>
 <form action = "bruh.php" method = "post">
 
 <h1>歡迎進入詐騙kk園區</h1>
@@ -29,6 +65,7 @@
 <p>密碼:<input type = "password" name = "pwd" required>
 <p><input type = "submit" value = "同意賣出身體所有權">
 <p><input type = "reset" value = "改填寫朋友訊息">
+
 </body>
 </html>
 
