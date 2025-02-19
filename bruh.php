@@ -10,6 +10,7 @@
 <a href="https://youtu.be/dQw4w9WgXcQ?si=gcjBl9FzYtlKxjfj" target="_blank">The best video on the world</a>
 <p>
 <img src="https://cdn.discordapp.com/attachments/971692563281104918/1341608962457342103/20dcd8b2166a6e4486aa1ee1375529c7.jpg?ex=67b69e36&is=67b54cb6&hm=cd19f5e25f9917128667f0c83c269a177512ce37d3ceb61c4e44c824ebff5a28&" width="300" height="value" alt="還真是高高在上呢">
+<img src="auqa.png" />
 <img src="https://cdn.discordapp.com/attachments/971692563281104918/1341609848181358654/1720628382537.gif?ex=67b69f09&is=67b54d89&hm=dfe740e5706f71728cdb73826d7cf3f9b33e211ce6a233cc0036759a55c94d0f&" width="300" height="value" alt="gif">
 <p><form action = "bruh.php" method = "post">
 <h1>歡迎進入詐騙kk園區</h1>

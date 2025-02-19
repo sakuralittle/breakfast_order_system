@@ -1,4 +1,5 @@
 {
     "open-php-html-js-in-browser.urlToOpen": "http://localhost/",
-    "open-php-html-js-in-browser.documentRootFolder": "D:\\food order system\\breakfast_order_system"
+    "open-php-html-js-in-browser.documentRootFolder": "D:\\food order system\\breakfast_order_system",
+    "open-php-html-js-in-browser.customHost": "localhost:8080"
 }
