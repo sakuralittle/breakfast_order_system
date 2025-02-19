@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-<a href="https://youtu.be/W8DCWI_Gc9c?si=J6oTIMcA_RAvEjWM"><img src = "whyyyyyy.jpg"></a>
+<a href="https://youtu.be/W8DCWI_Gc9c?si=J6oTIMcA_RAvEjWM" target="_blank"><img src = "whyyyyyy.jpg"></a>
 <p>
 <a href="https://youtu.be/WWB01IuMvzA?si=CK8ENwNh_v6wtM-P">A wonderful song</a>
 <p>
