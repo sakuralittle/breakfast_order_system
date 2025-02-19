@@ -69,10 +69,10 @@
         img1.style.width = size1+'px';
         posX1 += (speedX1);
         posY1 += (speedY1);
-        if (posX1 + img1.width >= window.innerWidth || posX1< 0) {
+        if (posX1 + img1.width >= window.innerWidth || posX1 < 1) {
             speedX1 = -speedX1; 
         }
-        if (posY1 + img1.height >= window.innerHeight || posY1 < 0) {
+        if (posY1 + img1.height >= window.innerHeight || posY1< 1) {
             speedY1 = -speedY1; 
         }
         img1.style.left = posX1 + 'px';
