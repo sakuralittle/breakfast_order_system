@@ -18,7 +18,7 @@
         }
         #high {
             position: absolute;
-            width: 480px; /* 設定圖片寬度 */
+            width: 200px; /* 設定圖片寬度 */
             height: auto; /* 設定圖片高度 */
             top:300px;
             left:0;
@@ -48,6 +48,8 @@
     let speedY = 2;
     let speedX1 = 4; 
     let speedY1 = 4;
+    let size1=200;
+    let sizechange1=1;
     function moveImage() {
         posX += speedX;
         posY += speedY;
@@ -67,6 +69,11 @@
         if (posY1 + img1.height >= window.innerHeight || posY1 < 0) {
             speedY1 = -speedY1; 
         }
+        size1+=sizechange1;
+        if(size1>480 || size1<100){
+            sizechange1*=-1;
+        }
+        img1.style.width = size1+'px';
         img1.style.left = posX1 + 'px';
         img1.style.top = posY1 + 'px';
         requestAnimationFrame(moveImage); 
