@@ -61,6 +61,12 @@
         }
         img.style.left = posX + 'px';
         img.style.top = posY + 'px';
+        
+        size1+=sizechange1;
+        if(size1>480 || size1<100){
+            sizechange1*=-1;
+        }
+        img1.style.width = size1+'px';
         posX1 += (speedX1);
         posY1 += (speedY1);
         if (posX1 + img1.width >= window.innerWidth || posX1< 0) {
@@ -69,11 +75,6 @@
         if (posY1 + img1.height >= window.innerHeight || posY1 < 0) {
             speedY1 = -speedY1; 
         }
-        size1+=sizechange1;
-        if(size1>480 || size1<100){
-            sizechange1*=-1;
-        }
-        img1.style.width = size1+'px';
         img1.style.left = posX1 + 'px';
         img1.style.top = posY1 + 'px';
         requestAnimationFrame(moveImage); 
