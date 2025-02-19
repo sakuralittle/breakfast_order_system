@@ -1,9 +1,12 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
 <title>哈哈哈大優惠</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 <style>
         body {
             margin: 0;
@@ -37,6 +40,11 @@
 
 
 <img id="AQUA" src="aqua.png" />
+<!--<audio id="audioPlayer" controls autoplay>
+    <source src="riba.mp3" type="audio/mpeg">
+    您的瀏覽器不支援音訊元素。
+</audio>-->
+
 <script>
     const img = document.getElementById('AQUA');
     const img1 = document.getElementById('high');
@@ -50,6 +58,46 @@
     let speedY1 = 4;
     let size1=200;
     let sizechange1=1;
+    //const audioPlayer = document.getElementById('audioPlayer');
+        const audioFiles = [
+            'rickroll.mp3', 'riba.mp3','bruh.mp3'
+        ];
+        let currentTrack = 0;
+        let isPlaying = false;
+        let audio = new Audio();
+
+        // 監聽整個文檔的點擊事件
+        document.addEventListener('click', function() {
+            if (!isPlaying) {
+                isPlaying = true; // 防止重複播放
+
+                // 播放音頻
+                playAudio();
+            }
+        });
+
+        function playAudio() {
+            if (currentTrack < audioFiles.length) {
+                audio.src = audioFiles[currentTrack];
+                audio.volume = 1; // 解除靜音
+
+                audio.play().catch(error => {
+                    console.error("播放失敗:", error);
+                });
+
+                // 當音頻結束時，播放下一首
+                audio.onended = function() {
+                    currentTrack++;
+                    playAudio(); // 播放下一首
+                };
+            } else {
+                // 重置播放
+                currentTrack = 0;
+                isPlaying = false; // 允許再次播放
+            }
+        }
+
+
     const images = ["image.png", "band.jpg", "1.png"];
         let currentIndex = 0;
 
