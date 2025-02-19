@@ -50,7 +50,7 @@
     let speedY1 = 4;
     let size1=200;
     let sizechange1=1;
-    const images = ["image.png", "band.jpg", "1.jpg"];
+    const images = ["image.png", "band.jpg", "1.png"];
         let currentIndex = 0;
 
         function changeImage() {
