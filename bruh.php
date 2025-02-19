@@ -7,13 +7,20 @@
 <style>
         body {
             margin: 0;
-            overflow: hidden; /* 隱藏滾動條 */
+            
         }
         #AQUA {
             position: absolute;
             width: 480px; /* 設定圖片寬度 */
             height: auto; /* 設定圖片高度 */
             top:0;
+            left:0;
+        }
+        #high {
+            position: absolute;
+            width: 480px; /* 設定圖片寬度 */
+            height: auto; /* 設定圖片高度 */
+            top:300px;
             left:0;
         }
     </style>
@@ -24,18 +31,23 @@
 <p>
 <a href="https://youtu.be/dQw4w9WgXcQ?si=gcjBl9FzYtlKxjfj" target="_blank">The best video on the world</a>
 <p>
-<img src="https://cdn.discordapp.com/attachments/971692563281104918/1341608962457342103/20dcd8b2166a6e4486aa1ee1375529c7.jpg?ex=67b69e36&is=67b54cb6&hm=cd19f5e25f9917128667f0c83c269a177512ce37d3ceb61c4e44c824ebff5a28&" width="300" height="value" alt="還真是高高在上呢">
+<img id="high" src="https://cdn.discordapp.com/attachments/971692563281104918/1341608962457342103/20dcd8b2166a6e4486aa1ee1375529c7.jpg?ex=67b69e36&is=67b54cb6&hm=cd19f5e25f9917128667f0c83c269a177512ce37d3ceb61c4e44c824ebff5a28&" width="300" height="value" alt="還真是高高在上呢">
 
 <img src="https://cdn.discordapp.com/attachments/971692563281104918/1341609848181358654/1720628382537.gif?ex=67b69f09&is=67b54d89&hm=dfe740e5706f71728cdb73826d7cf3f9b33e211ce6a233cc0036759a55c94d0f&" width="300" height="value" alt="gif">
-<p>
+
 
 <img id="AQUA" src="aqua.png" />
 <script>
     const img = document.getElementById('AQUA');
+    const img1 = document.getElementById('high');
     let posX = 0;
     let posY = 0;
+    let posX1 = 0;
+    let posY1 = 540;
     let speedX = 2; 
     let speedY = 2;
+    let speedX1 = 4; 
+    let speedY1 = 4;
     function moveImage() {
         posX += speedX;
         posY += speedY;
@@ -47,6 +59,16 @@
         }
         img.style.left = posX + 'px';
         img.style.top = posY + 'px';
+        posX1 += (speedX1);
+        posY1 += (speedY1);
+        if (posX1 + img1.width >= window.innerWidth || posX1< 0) {
+            speedX1 = -speedX1; 
+        }
+        if (posY1 + img1.height >= window.innerHeight || posY1 < 0) {
+            speedY1 = -speedY1; 
+        }
+        img1.style.left = posX1 + 'px';
+        img1.style.top = posY1 + 'px';
         requestAnimationFrame(moveImage); 
     }
     moveImage(); 
